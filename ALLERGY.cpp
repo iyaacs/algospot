@@ -128,9 +128,6 @@ int main(){
 			}
 		}
 		
-
-
-
 		for (int i = 0; i < N; i++){ edible.push_back(0); }
 		fastsolve(caneat, eaters, edible, 0, best, N, M);
 		cout << best << endl;

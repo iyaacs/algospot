@@ -10,7 +10,7 @@ bool XOR(int A,int B){
 	return !(((!A) || B) && (A || (!B)));
 }
 
-int syndrom(string s){
+int solve(string s){
 	int ret = 0;
 
 	if(XOR(XOR(s[0]-'0',s[2]-'0'), XOR(s[4]-'0',s[6]-'0')))
@@ -30,13 +30,13 @@ int main(){
 		string s;
 		cin>>s;
 
-		int flip = syndrom(s);
-		if(flip != 0){
-			if( s[flip-1] == '0')
-				s[flip-1] = '1';
+		int num = solve(s);
+		if(num != 0){
+			if( s[num-1] == '0')
+				s[num-1] = '1';
 
 			else
-				s[flip-1] = '0';
+				s[num-1] = '0';
 		}
 		cout<<s[2]<<s[4]<<s[5]<<s[6]<<endl;
 
